@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Apartment Database{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% block links %}{% endblock %}
+</head>
+<body class="w3-light-grey">
+    <!-- Navigation Bar -->
+    <div class="w3-bar w3-white w3-large">
+        <a href="{% url 'index' %}" class="w3-bar-item w3-button w3-blue w3-mobile"><i class="fa fa-home w3-margin-right"></i>Home</a>
+        <a href="{% url 'browse_all' %}" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Browse All</a>
+    </div>
+
+    <!-- Header Block-->
+    {% block header %}{% endblock %}
+
+    <!-- Content Block -->
+    {% block content %}{% endblock %}
+
+</body>
+</html>
